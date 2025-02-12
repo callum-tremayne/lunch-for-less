@@ -1,0 +1,599 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lunch for Less Menu - Headingley Campus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Inter:wght@400;700;900&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.2/handlebars.min.js"></script>
+<script>
+  $(document).ready(function () {
+    // Define an array for the days of the week
+    var days = [
+      "sunday",
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+    ];
+    var today = days[new Date().getDay()];
+
+    // If today is Saturday or Sunday, default to Monday
+    if (today === "saturday" || today === "sunday") {
+      today = "monday";
+    }
+
+    // Capitalize the first letter
+    var displayDay = today.charAt(0).toUpperCase() + today.slice(1);
+
+    // Update the main title text
+    $(".main-day-title .title").text(displayDay + " - Daily Rotation");
+  });
+</script>
+<div class="top-container">
+  <div class="back-container">
+    <a href="campusm://pocketguide?pg_code=428889" class="back"
+      ><svg
+        width="40px"
+        height="40px"
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="#e9502c"
+        stroke="#fffff"
+      >
+        <polyline points="244 400 100 256 244 112" id="polyline"></polyline>
+        <line x1="120" y1="256" x2="412" y2="256" id="line"></line>
+      </svg>
+      <p>Back</p>
+    </a>
+  </div>
+  <div class="header-image">
+    <div class="lunchforless">
+      <img
+        src="https://portal.ombiel.co.uk/assets/LeedsBeckettUniversity/LeedsBeckett/FoodMenu/2023-24/lbuappArtboard-1-copy-3.png"
+        alt="Lunch For Less"
+      />
+    </div>
+  </div>
+</div>
+<div class="main-day-title">
+  <div class="title"></div>
+</div>
+<section id="headingley-monday">
+  <script id="head-monday-template" type="text/x-handlebars-template">
+    <div class="menu-category l4l">
+      <button class="collapsible l4l">
+        <span class="menu-category-title l4l">Headingley Campus</span><span
+          class="arrow l4l"
+        >▼</span>
+      </button>
+      <div class="content l4l">
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLess}}</h4>
+          <p><strong>{{cells.LunchForLessPrice}}</strong></p>
+        </div>
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLessVegan}}</h4>
+          <p><strong>{{cells.LunchForLessVeganPrice}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </script>
+</section>
+<section id="city-monday">
+  <script id="city-monday-template" type="text/x-handlebars-template">
+    <div class="menu-category l4l">
+      <button class="collapsible l4l">
+        <span class="menu-category-title l4l">City Campus</span><span
+          class="arrow l4l"
+        >▼</span>
+      </button>
+      <div class="content l4l">
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLess}}</h4>
+          <p><strong>{{cells.LunchForLessPrice}}</strong></p>
+        </div>
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLessVegan}}</h4>
+          <p><strong>{{cells.LunchForLessVeganPrice}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </script>
+</section>
+<section id="headingley-tuesday">
+  <script id="head-tuesday-template" type="text/x-handlebars-template">
+    <div class="menu-category l4l">
+      <button class="collapsible l4l">
+        <span class="menu-category-title l4l">Headingley Campus</span><span
+          class="arrow l4l"
+        >▼</span>
+      </button>
+      <div class="content l4l">
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLess}}</h4>
+          <p><strong>{{cells.LunchForLessPrice}}</strong></p>
+        </div>
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLessVegan}}</h4>
+          <p><strong>{{cells.LunchForLessVeganPrice}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </script>
+</section>
+<section id="city-tuesday">
+  <script id="city-tuesday-template" type="text/x-handlebars-template">
+    <div class="menu-category l4l">
+      <button class="collapsible l4l">
+        <span class="menu-category-title l4l">City Campus</span><span
+          class="arrow l4l"
+        >▼</span>
+      </button>
+      <div class="content l4l">
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLess}}</h4>
+          <p><strong>{{cells.LunchForLessPrice}}</strong></p>
+        </div>
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLessVegan}}</h4>
+          <p><strong>{{cells.LunchForLessVeganPrice}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </script>
+</section>
+<section id="headingley-wednesday">
+  <script id="head-wednesday-template" type="text/x-handlebars-template">
+    <div class="menu-category l4l">
+      <button class="collapsible l4l">
+        <span class="menu-category-title l4l">Headingley Campus</span><span
+          class="arrow l4l"
+        >▼</span>
+      </button>
+      <div class="content l4l">
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLess}}</h4>
+          <p><strong>{{cells.LunchForLessPrice}}</strong></p>
+        </div>
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLessVegan}}</h4>
+          <p><strong>{{cells.LunchForLessVeganPrice}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </script>
+</section>
+<section id="city-wednesday">
+  <script id="city-wednesday-template" type="text/x-handlebars-template">
+    <div class="menu-category l4l">
+      <button class="collapsible l4l">
+        <span class="menu-category-title l4l">City Campus</span><span
+          class="arrow l4l"
+        >▼</span>
+      </button>
+      <div class="content l4l">
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLess}}</h4>
+          <p><strong>{{cells.LunchForLessPrice}}</strong></p>
+        </div>
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLessVegan}}</h4>
+          <p><strong>{{cells.LunchForLessVeganPrice}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </script>
+</section>
+<section id="headingley-thursday">
+  <script id="head-thursday-template" type="text/x-handlebars-template">
+    <div class="menu-category l4l">
+      <button class="collapsible l4l">
+        <span class="menu-category-title l4l">Headingley Campus</span><span
+          class="arrow l4l"
+        >▼</span>
+      </button>
+      <div class="content l4l">
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLess}}</h4>
+          <p><strong>{{cells.LunchForLessPrice}}</strong></p>
+        </div>
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLessVegan}}</h4>
+          <p><strong>{{cells.LunchForLessVeganPrice}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </script>
+</section>
+<section id="city-thursday">
+  <script id="city-thursday-template" type="text/x-handlebars-template">
+    <div class="menu-category l4l">
+      <button class="collapsible l4l">
+        <span class="menu-category-title l4l">City Campus</span><span
+          class="arrow l4l"
+        >▼</span>
+      </button>
+      <div class="content l4l">
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLess}}</h4>
+          <p><strong>{{cells.LunchForLessPrice}}</strong></p>
+        </div>
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLessVegan}}</h4>
+          <p><strong>{{cells.LunchForLessVeganPrice}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </script>
+</section>
+<section id="headingley-friday">
+  <script id="head-friday-template" type="text/x-handlebars-template">
+    <div class="menu-category l4l">
+      <button class="collapsible l4l">
+        <span class="menu-category-title l4l">Headingley Campus</span><span
+          class="arrow l4l"
+        >▼</span>
+      </button>
+      <div class="content l4l">
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLess}}</h4>
+          <p><strong>{{cells.LunchForLessPrice}}</strong></p>
+        </div>
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLessVegan}}</h4>
+          <p><strong>{{cells.LunchForLessVeganPrice}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </script>
+</section>
+<section id="city-friday">
+  <script id="city-friday-template" type="text/x-handlebars-template">
+    <div class="menu-category l4l">
+      <button class="collapsible l4l">
+        <span class="menu-category-title l4l">City Campus</span><span
+          class="arrow l4l"
+        >▼</span>
+      </button>
+      <div class="content l4l">
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLess}}</h4>
+          <p><strong>{{cells.LunchForLessPrice}}</strong></p>
+        </div>
+        <div class="menu-item l4l">
+          <h4>{{cells.LunchForLessVegan}}</h4>
+          <p><strong>{{cells.LunchForLessVeganPrice}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </script>
+</section>
+<div id="ifnvx4e">
+  <div class="menu-category l4l">
+    <button class="collapsible l4l">
+      <span class="menu-category-title l4l">City Campus</span
+      ><span class="arrow l4l">▼</span>
+    </button>
+    <div class="content l4l">
+      <div class="menu-item l4l">
+        <h4>{{cells.LunchForLess}}</h4>
+        <p><strong>{{cells.LunchForLessPrice}}</strong></p>
+      </div>
+      <div class="menu-item l4l">
+        <h4>{{cells.LunchForLessVegan}}</h4>
+        <p><strong>{{cells.LunchForLessVeganPrice}}</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="bottom-container">
+  <a href="https://www.leedsbeckett.ac.uk/beckettfood/rewards/" target="_blank"
+    ><img
+      src="https://portal.ombiel.co.uk/assets/LeedsBeckettUniversity/LeedsBeckett/FoodMenu/2024-25/UpayaPP-10.png"
+      alt="Rewards" /></a
+  ><span class="tnc">
+    Food Allergies & Intolerances -<br />
+    Before you order your food and drinks please ask a member of staff if you
+    would like to know about our ingredients.
+  </span>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // --- 1. Delegated event listener for collapsible accordions ---
+    // This will catch clicks on any element with class "collapsible"
+    $(document).on("click", ".collapsible", function () {
+      // Close all other open accordions
+      $(".collapsible")
+        .not(this)
+        .each(function () {
+          $(this).removeClass("active");
+          $(this).next(".content").css("max-height", "");
+        });
+
+      // Toggle the clicked accordion
+      $(this).toggleClass("active");
+      var content = $(this).next(".content");
+      if (
+        content.css("max-height") !== "0px" &&
+        content.css("max-height") !== "none"
+      ) {
+        content.css("max-height", "");
+      } else {
+        content.css("max-height", content[0].scrollHeight + "px");
+      }
+    });
+
+    // --- 2. Show only the section for today's day ---
+    // Define an array of days where index 0 is Sunday
+    var days = [
+      "sunday",
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+    ];
+    var today = days[new Date().getDay()];
+    // If today is Saturday or Sunday, default to Monday (or change as needed)
+    if (today === "saturday" || today === "sunday") {
+      today = "monday";
+    }
+
+    // List of section prefixes for City and Headingley campuses
+    var prefixes = ["city-", "headingley-"];
+
+    // Loop through and hide all sections that do not match today's prefix
+    $("section").each(function () {
+      var sectionId = $(this).attr("id");
+      var matchesToday = prefixes.some(
+        (prefix) => sectionId === `${prefix}${today}`
+      );
+
+      if (!matchesToday) {
+        $(this).hide(); // Hide sections that don't match today's day and prefix
+      }
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Existing listener for the location container toggling
+    var locationContainer = document.querySelector(".location-container");
+    var locationHeader = locationContainer.querySelector(".location-header");
+
+    locationHeader.addEventListener("click", function (e) {
+      // Prevent the document click event from immediately closing the dropdown
+      e.stopPropagation();
+      // Toggle the active state
+      locationContainer.classList.toggle("active");
+      var dropdown = locationContainer.querySelector(".location-dropdown");
+      if (dropdown.style.maxHeight && dropdown.style.maxHeight !== "0px") {
+        dropdown.style.maxHeight = null;
+      } else {
+        dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+      }
+    });
+
+    // Listen for clicks anywhere in the document.
+    document.addEventListener("click", function (e) {
+      // If the click target is not within the location container,
+      // then close the dropdown.
+      if (!locationContainer.contains(e.target)) {
+        locationContainer.classList.remove("active");
+        var dropdown = locationContainer.querySelector(".location-dropdown");
+        if (dropdown) {
+          dropdown.style.maxHeight = null;
+        }
+      }
+    });
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    var citySpreadsheet =
+      "https://docs.google.com/spreadsheets/d/1TkWMu07wdjNvzfwwqlF4_fehEElZt-3Nc2xgU-vIGHE/edit#gid=1777614410";
+    var headSpreadsheet =
+      "https://docs.google.com/spreadsheets/d/1TkWMu07wdjNvzfwwqlF4_fehEElZt-3Nc2xgU-vIGHE/edit?gid=0#gid=0";
+
+    function getWeekNumber(d) {
+      // Copy date so don't modify original
+      d = new Date(+d);
+      d.setHours(0, 0, 0, 0);
+      // Set to nearest Thursday: current date + 4 - current day number
+      // Make Sunday's day number 7
+      d.setDate(d.getDate() + 4 - (d.getDay() || 7));
+      // Get first day of year
+      var yearStart = new Date(d.getFullYear(), 0, 1);
+      // Calculate full weeks to nearest Thursday
+      var weekNo = Math.ceil(((d - yearStart) / 86400000 + 1) / 7);
+      // Return array of year and week number
+
+      // Check if week number is in the expected range (1-52)
+      if (weekNo < 1 || weekNo > 52) {
+        // If the week number is outside of the expected range, calculate the number of days
+        // in the current year and divide by 7 to get the actual number of weeks
+        var daysInYear = new Date(d.getFullYear(), 11, 31) - yearStart;
+        weekNo = Math.ceil(daysInYear / 7);
+      }
+
+      return [weekNo];
+    }
+
+    var weeknumber = getWeekNumber(new Date());
+    var date = new Date();
+
+    var currentDay = date.getDay();
+    var week = 0; // Initialize week to 0
+
+    if (currentDay == 6 || currentDay == 0) {
+      weeknumber = parseInt(weeknumber) + 1;
+    }
+
+    // Use if/else statements to assign the week based on the week number
+    if (
+      weeknumber == 1 ||
+      weeknumber == 4 ||
+      weeknumber == 7 ||
+      weeknumber == 10 ||
+      weeknumber == 13 ||
+      weeknumber == 16 ||
+      weeknumber == 19 ||
+      weeknumber == 22 ||
+      weeknumber == 25 ||
+      weeknumber == 28 ||
+      weeknumber == 31 ||
+      weeknumber == 34 ||
+      weeknumber == 37 ||
+      weeknumber == 40 ||
+      weeknumber == 43 ||
+      weeknumber == 46 ||
+      weeknumber == 49 ||
+      weeknumber == 52
+    ) {
+      week = 1;
+    } else if (
+      weeknumber == 2 ||
+      weeknumber == 5 ||
+      weeknumber == 8 ||
+      weeknumber == 11 ||
+      weeknumber == 14 ||
+      weeknumber == 17 ||
+      weeknumber == 20 ||
+      weeknumber == 23 ||
+      weeknumber == 26 ||
+      weeknumber == 29 ||
+      weeknumber == 32 ||
+      weeknumber == 35 ||
+      weeknumber == 38 ||
+      weeknumber == 41 ||
+      weeknumber == 44 ||
+      weeknumber == 47 ||
+      weeknumber == 50
+    ) {
+      week = 2;
+    } else if (
+      weeknumber == 3 ||
+      weeknumber == 6 ||
+      weeknumber == 9 ||
+      weeknumber == 12 ||
+      weeknumber == 15 ||
+      weeknumber == 18 ||
+      weeknumber == 21 ||
+      weeknumber == 24 ||
+      weeknumber == 27 ||
+      weeknumber == 30 ||
+      weeknumber == 33 ||
+      weeknumber == 36 ||
+      weeknumber == 39 ||
+      weeknumber == 42 ||
+      weeknumber == 45 ||
+      weeknumber == 48 ||
+      weeknumber == 51
+    ) {
+      week = 3;
+    } else {
+      // If the week number is not in the expected range, set week to 0
+      week = 0;
+    }
+
+    var HeadingleyMonTemplate = Handlebars.compile(
+      $("#head-monday-template").html()
+    );
+    var CityMonTemplate = Handlebars.compile($("#city-monday-template").html());
+
+    var HeadingleyTueTemplate = Handlebars.compile(
+      $("#head-tuesday-template").html()
+    );
+    var CityTueTemplate = Handlebars.compile(
+      $("#city-tuesday-template").html()
+    );
+
+    var HeadingleyWedTemplate = Handlebars.compile(
+      $("#head-wednesday-template").html()
+    );
+    var CityWedTemplate = Handlebars.compile(
+      $("#city-wednesday-template").html()
+    );
+
+    var HeadingleyThurTemplate = Handlebars.compile(
+      $("#head-thursday-template").html()
+    );
+    var CityThurTemplate = Handlebars.compile(
+      $("#city-thursday-template").html()
+    );
+
+    var HeadingleyFriTemplate = Handlebars.compile(
+      $("#head-friday-template").html()
+    );
+    var CityFriTemplate = Handlebars.compile($("#city-friday-template").html());
+
+    $("#headingley-monday").sheetrock({
+      url: headSpreadsheet,
+      query: "select K,L,M,N where A = 'Monday' and B = " + week + "",
+      rowTemplate: HeadingleyMonTemplate,
+    });
+
+    $("#city-monday").sheetrock({
+      url: citySpreadsheet,
+      query: "select K,L,M,N where A = 'Monday' and B = " + week + "",
+      rowTemplate: CityMonTemplate,
+    });
+
+    $("#headingley-tuesday").sheetrock({
+      url: headSpreadsheet,
+      query: "select K,L,M,N where A = 'Tuesday' and B = " + week + "",
+      rowTemplate: HeadingleyTueTemplate,
+    });
+
+    $("#city-tuesday").sheetrock({
+      url: citySpreadsheet,
+      query: "select K,L,M,N where A = 'Tuesday' and B = " + week + "",
+      rowTemplate: CityTueTemplate,
+    });
+
+    $("#headingley-wednesday").sheetrock({
+      url: headSpreadsheet,
+      query: "select K,L,M,N where A = 'Wednesday' and B = " + week + "",
+      rowTemplate: HeadingleyWedTemplate,
+    });
+
+    $("#city-wednesday").sheetrock({
+      url: citySpreadsheet,
+      query: "select K,L,M,N where A = 'Wednesday' and B = " + week + "",
+      rowTemplate: CityWedTemplate,
+    });
+
+    $("#headingley-thursday").sheetrock({
+      url: headSpreadsheet,
+      query: "select K,L,M,N where A = 'Thursday' and B = " + week + "",
+      rowTemplate: HeadingleyThurTemplate,
+    });
+
+    $("#city-thursday").sheetrock({
+      url: citySpreadsheet,
+      query: "select K,L,M,N where A = 'Thursday' and B = " + week + "",
+      rowTemplate: CityThurTemplate,
+    });
+
+    $("#headingley-friday").sheetrock({
+      url: headSpreadsheet,
+      query: "select K,L,M,N where A = 'Friday' and B = " + week + "",
+      rowTemplate: HeadingleyFriTemplate,
+    });
+
+    $("#city-friday").sheetrock({
+      url: citySpreadsheet,
+      query: "select K,L,M,N where A = 'Friday' and B = " + week + "",
+      rowTemplate: CityFriTemplate,
+    });
+  });
+</script>
